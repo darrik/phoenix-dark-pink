@@ -6,13 +6,20 @@
 ;; URL: http://github.com/j0ni/phoenix-dark-pink
 ;; Version: 1.0
 
+;; This is Rikard Glans' fork
+;; https://github.com/darrik/phoenix-dark-pink
+;; Timestamp: <2013-07-23 03:06:10>
+
 ;; Code:
 
-(deftheme phoenix-dark-pink
+(unless (>= 24 emacs-major-version)
+  (error "phoenix-dark-pink-theme requires Emacs 24 or later."))
+
+(deftheme phoenix-dark-pink-darrik
   "Phoenix Dark Pink color theme")
 
 (custom-theme-set-faces
- 'phoenix-dark-pink
+ 'phoenix-dark-pink-darrik
  '(default ((t (:inherit nil :stipple nil :background "#191919" :foreground "#cccccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :width normal))))
  '(cursor ((t (:background "#cccccc" :foreground "#191919" :underline nil :weight normal))))
  '(fixed-pitch ((t (:underline nil :weight normal :family "PragmataPro"))))
@@ -111,7 +118,7 @@
  '(rainbow-delimiters-depth-4-face ((t (:foreground "#af7faf"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "#9f6f9f"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#8f5f8f"))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#815f8d"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#815f8a"))))
 
  '(js2-warning ((t (:foreground "#dfafdf"))))
  '(js2-error ((t (:foreground "#efbfef"))))
@@ -153,13 +160,35 @@
  '(w3m-lnum-minibuffer-prompt ((t (:foreground "#efbfff"))))
 
  '(highlight-indentation-face ((t (:inherit highlight))))
- '(highlight-indentation-current-column-face ((t (:inherit highlight)))))
+ '(highlight-indentation-current-column-face ((t (:inherit highlight))))
+
+ ;; org mode
+ '(org-level-1 ((t (:foreground "#e1b1ed"))))
+ '(org-level-2 ((t (:foreground "#dfafdf"))))
+ '(org-level-3 ((t (:foreground "#d1a1dd"))))
+ '(org-level-4 ((t (:foreground "#c19fcf"))))
+ '(org-level-5 ((t (:foreground "#bf8fbf"))))
+ '(org-level-6 ((t (:foreground "#af7faf"))))
+ '(org-level-7 ((t (:foreground "#9f6f9f"))))
+ '(org-level-8 ((t (:foreground "#8f5f8f"))))
+ '(org-level-9 ((t (:foreground "#815f8a"))))
+ '(org-meta-line ((t (:foreground "#714161"))))
+ '(org-table ((t (:foreground "#c19fcf"))))
+ '(org-document-info-keyword ((t (:foreground "#a582a3"))))
+ '(org-document-title ((t (:foreground "#dfafdf"))))
+ '(org-date ((t (:foreground "#a582a3"))))
+ )
 
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'phoenix-dark-pink)
+(provide-theme 'phoenix-dark-pink-darrik)
+
+;; Local Variables:
+;; no-byte-compile: t
+;; eval: (when (require 'rainbow-mode nil t) (rainbow-mode 1))
+;; End:
 
 ;;; phoenix-dark-pink-theme.el ends here
