@@ -8,11 +8,11 @@
 
 ;; This is Rikard Glans' fork
 ;; https://github.com/darrik/phoenix-dark-pink
-;; Timestamp: <2013-07-23 03:06:10>
+;; Timestamp: <2015-04-01 23:32:34>
 
 ;; Code:
 
-(unless (>= 24 emacs-major-version)
+(unless (>= emacs-major-version 24)
   (error "phoenix-dark-pink-theme requires Emacs 24 or later."))
 
 (deftheme phoenix-dark-pink-darrik
@@ -20,8 +20,8 @@
 
 (custom-theme-set-faces
  'phoenix-dark-pink-darrik
- '(default ((t (:inherit nil :stipple nil :background "#191919" :foreground "#cccccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :width normal))))
- '(cursor ((t (:background "#cccccc" :foreground "#191919" :underline nil :weight normal))))
+ '(default ((t (:inherit nil :stipple nil :background "#101010" :foreground "#cccccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :width normal))))
+ '(cursor ((t (:background "#cccccc" :foreground "#101010" :underline nil :weight normal))))
  '(fixed-pitch ((t (:underline nil :weight normal :family "PragmataPro"))))
  '(variable-pitch ((t (:family "Sans Serif" :weight normal :underline nil))))
  '(escape-glyph ((t (:weight normal :underline nil :foreground "#d1afdd"))))
@@ -177,6 +177,7 @@
  '(org-document-info-keyword ((t (:foreground "#a582a3"))))
  '(org-document-title ((t (:foreground "#dfafdf"))))
  '(org-date ((t (:foreground "#a582a3"))))
+
  )
 
 ;;;###autoload
